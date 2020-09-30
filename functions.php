@@ -29,4 +29,21 @@ function load_javascript()
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
 
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
+
+// Add menus
+add_theme_support('menus');
+
+// Register menus
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'THEMENAME' ),
+) );
+
 ?>

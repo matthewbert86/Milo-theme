@@ -10903,18 +10903,53 @@ header {
   box-shadow: 0px 0px 20px black;
 }
 
-.headspace {
-  padding: 0 30px;
+header .headspace {
+  padding: 0 50px;
 }
 
-.logo {
+header .logo {
   width: 30rem;
   padding: 1rem 0;
 }
 
-@media (max-width: 968px) {
-  .logo {
+header .primary-menu {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+  header .primary-menu {
+    display: flex;
+  }
+}
+
+header .primary-menu li {
+  list-style: none;
+}
+
+header .primary-menu li a {
+  display: block;
+  padding: 0.25rem 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+header .primary-menu ul {
+  display: flex;
+  list-style-position: none;
+}
+
+@media (max-width: 992px) {
+  header .logo {
     width: 18rem;
   }
+}
+
+#hero {
+  height: 400px;
+  width: 100%;
+  background: #f0f0f0;
 }
 
