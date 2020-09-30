@@ -6,9 +6,20 @@ function load_stylesheets()
 
     wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', '', 1, 'all');
     wp_enqueue_style('stylesheet');
+
+    wp_register_style('custom', get_template_directory_uri() . '/app.css', '', 1, 'all');
+    wp_enqueue_style('custom');
+
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 
+
+// Add bootstrap
+function wpbootstrap_enqueue_styles() {
+    wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' );
+    wp_enqueue_style( 'my-style', get_template_directory_uri() . '/style.css');
+    }
+    add_action('wp_enqueue_scripts', 'wpbootstrap_enqueue_styles');
 
 // Add JavaScript
 function load_javascript()
