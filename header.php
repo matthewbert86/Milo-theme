@@ -11,7 +11,9 @@
     
 
 <header>
-    <div class="container">
+    <div class="headspace">
     
+    <img src="<?php bloginfo('template_directory');?>/images/chainlogo.png" class="img-fluid logo">
+
     </div>
 </header>
