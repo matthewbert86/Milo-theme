@@ -1,5 +1,3 @@
-header {
-  .test {
-    background: green;
-  }
-}
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import 'header';
